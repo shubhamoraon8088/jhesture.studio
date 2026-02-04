@@ -9,7 +9,7 @@ export const PORTFOLIO_ITEMS: PortfolioItem[] = [
     image: 'https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&q=80&w=1200',
     hoverImage: 'https://images.unsplash.com/photo-1496747611176-843222e1e57c?auto=format&fit=crop&q=80&w=1200',
     year: '2025',
-    video: '/client 1.mp4'
+    video: 'https://youtube.com/shorts/qfoajV0oOpY?feature=share'
   },
   {
     id: '2',
@@ -18,7 +18,7 @@ export const PORTFOLIO_ITEMS: PortfolioItem[] = [
     image: 'https://images.unsplash.com/photo-1509631179647-0177331693ae?auto=format&fit=crop&q=80&w=1200',
     hoverImage: 'https://images.unsplash.com/photo-1492707892479-7bc8d5a4ee93?auto=format&fit=crop&q=80&w=1200',
     year: '2025',
-    video: '/client2.mp4'
+    video: 'https://youtube.com/shorts/WhoLL4CBJyE?feature=share'
   },
   {
     id: '3',
@@ -27,7 +27,7 @@ export const PORTFOLIO_ITEMS: PortfolioItem[] = [
     image: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&q=80&w=1200',
     hoverImage: 'https://images.unsplash.com/photo-1485462195733-1469e3a67732?auto=format&fit=crop&q=80&w=1200',
     year: '2025',
-    video: '/lady reel.mp4'
+    video: 'https://youtube.com/shorts/Cyclnd_9UdQ?feature=share'
   },
   {
     id: '4',
@@ -36,7 +36,7 @@ export const PORTFOLIO_ITEMS: PortfolioItem[] = [
     image: 'https://images.unsplash.com/photo-1539109132314-3475d24c2195?auto=format&fit=crop&q=80&w=1200',
     hoverImage: 'https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?auto=format&fit=crop&q=80&w=1200',
     year: '2025',
-    video: '/motivation.mp4'
+    video: 'https://www.youtube.com/watch?v=hLtaSVUdQ9o'
   },
   {
     id: '5',
@@ -45,8 +45,8 @@ export const PORTFOLIO_ITEMS: PortfolioItem[] = [
     image: 'https://images.unsplash.com/photo-1481325545291-943f4eee1ad9?auto=format&fit=crop&q=80&w=1200',
     hoverImage: 'https://images.unsplash.com/photo-1445205170230-053b830c6050?auto=format&fit=crop&q=80&w=1200',
     year: '2025',
-    video: '/fonts 2.mp4',
-    hoverVideo: '/capcot pro.mp4'
+    video: 'https://youtu.be/Zorl0Af5R3Y?si=o2DqbY7kKGDjQwqO',
+    hoverVideo: 'https://youtu.be/-Rv6hzeXx98?si=tEjck8yuE6mJv6LY'
   },
   {
     id: '6',
@@ -55,7 +55,7 @@ export const PORTFOLIO_ITEMS: PortfolioItem[] = [
     image: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&q=80&w=1200',
     hoverImage: 'https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?auto=format&fit=crop&q=80&w=1200',
     year: '2024',
-    video: '/ai documentry video 4k.mp4'
+    video: 'https://youtu.be/_kCzG6oe_pE'
   },
   {
     id: '7',
@@ -64,8 +64,8 @@ export const PORTFOLIO_ITEMS: PortfolioItem[] = [
     image: 'https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&q=80&w=1200',
     hoverImage: 'https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&q=80&w=1200',
     year: '2025',
-    video: '/sports.mp4',
-    hoverVideo: '/football.mp4'
+    video: 'https://youtu.be/qw3GEP51vqY?si=Ult1-ZHiZVcGUuFX',
+    hoverVideo: 'https://youtu.be/lFIlCzw1hlc?si=xNeZEPyF5gVHg8jI'
   },
   {
     id: '8',
@@ -74,8 +74,8 @@ export const PORTFOLIO_ITEMS: PortfolioItem[] = [
     image: 'https://images.unsplash.com/photo-1529139513055-07f9127ef3b0?auto=format&fit=crop&q=80&w=1200',
     hoverImage: 'https://images.unsplash.com/photo-1539109132314-3475d24c2195?auto=format&fit=crop&q=80&w=1200',
     year: '2025',
-    video: '/study hack sample.mp4',
-    hoverVideo: '/tribal titan02.mp4'
+    video: 'https://youtu.be/1ohAKsiLLl8',
+    hoverVideo: 'https://youtu.be/_VzLfXaH9b4'
   }
 ];
 

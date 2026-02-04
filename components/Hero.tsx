@@ -1,5 +1,6 @@
 
 import React, { useState, useEffect, useRef } from 'react';
+import { isYouTube, getYouTubeEmbedUrl, getYouTubeIframeStyle } from '../utils';
 
 interface GalleryImage {
   id: number;
@@ -11,16 +12,16 @@ interface GalleryImage {
 }
 
 const GALLERY_IMAGES: GalleryImage[] = [
-  { id: 1, url: '/client 1.mp4', top: '15%', left: '10%', width: '280px', rotation: '-5deg' },
-  { id: 2, url: '/client2.mp4', top: '20%', left: '65%', width: '320px', rotation: '8deg' },
-  { id: 3, url: '/lady reel.mp4', top: '55%', left: '5%', width: '250px', rotation: '-12deg' },
-  { id: 4, url: '/motivation.mp4', top: '65%', left: '75%', width: '300px', rotation: '15deg' },
-  { id: 5, url: '/ai documentry video 4k.mp4', top: '10%', left: '40%', width: '220px', rotation: '3deg' },
-  { id: 6, url: '/sports.mp4', top: '75%', left: '35%', width: '350px', rotation: '-4deg' },
-  { id: 7, url: '/football.mp4', top: '40%', left: '80%', width: '260px', rotation: '10deg' },
-  { id: 8, url: '/study hack sample.mp4', top: '5%', left: '85%', width: '240px', rotation: '-8deg' },
-  { id: 9, url: '/tribal titan02.mp4', top: '45%', left: '25%', width: '290px', rotation: '5deg' },
-  { id: 10, url: '/client 1.mp4', top: '30%', left: '55%', width: '270px', rotation: '-6deg' },
+  { id: 1, url: 'https://youtube.com/shorts/qfoajV0oOpY', top: '15%', left: '10%', width: '280px', rotation: '-5deg' },
+  { id: 2, url: 'https://youtube.com/shorts/WhoLL4CBJyE', top: '20%', left: '65%', width: '320px', rotation: '8deg' },
+  { id: 3, url: 'https://youtube.com/shorts/Cyclnd_9UdQ', top: '55%', left: '5%', width: '250px', rotation: '-12deg' },
+  { id: 4, url: 'https://www.youtube.com/watch?v=hLtaSVUdQ9o', top: '65%', left: '75%', width: '300px', rotation: '15deg' },
+  { id: 5, url: 'https://youtu.be/Zorl0Af5R3Y', top: '10%', left: '40%', width: '220px', rotation: '3deg' },
+  { id: 6, url: 'https://youtu.be/qw3GEP51vqY', top: '75%', left: '35%', width: '350px', rotation: '-4deg' },
+  { id: 7, url: 'https://youtu.be/lFIlCzw1hlc', top: '40%', left: '80%', width: '260px', rotation: '10deg' },
+  { id: 8, url: 'https://youtu.be/1ohAKsiLLl8', top: '5%', left: '85%', width: '240px', rotation: '-8deg' },
+  { id: 9, url: 'https://youtu.be/_VzLfXaH9b4', top: '45%', left: '25%', width: '290px', rotation: '5deg' },
+  { id: 10, url: 'https://youtube.com/shorts/qfoajV0oOpY', top: '30%', left: '55%', width: '270px', rotation: '-6deg' },
 ];
 
 const GREETINGS = [
@@ -265,14 +266,15 @@ const ImageCard: React.FC<{ data: GalleryImage; mouseX: number; mouseY: number }
       }}
       className="absolute aspect-[4/5] overflow-hidden rounded-sm bg-brand-gray shadow-2xl pointer-events-none will-change-transform border theme-border"
     >
-      <video
-        src={data.url}
-        autoPlay
-        loop
-        muted
-        playsInline
-        className="w-full h-full object-cover grayscale brightness-50"
-      />
+      <div className="w-full h-full relative z-10 pointer-events-none grayscale brightness-50">
+        <iframe
+          src={getYouTubeEmbedUrl(data.url)}
+          className="w-full h-full overflow-hidden"
+          frameBorder="0"
+          allow="autoplay; encrypted-media"
+          style={getYouTubeIframeStyle(data.url, true)}
+        />
+      </div>
     </div>
   );
 };

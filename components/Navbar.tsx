@@ -37,22 +37,16 @@ const Navbar: React.FC<NavbarProps> = ({ onThemeChange, currentTheme, onBookingC
           </button>
         </div>
 
-        <div className="hidden md:flex items-center space-x-12">
+        <div className="hidden md:flex items-center space-x-4">
           {['Works', 'About', 'Services', 'Contact'].map((item) => (
             <a
               key={item}
               href={`#${item.toLowerCase()}`}
-              className="text-xl uppercase tracking-normal font-sans font-light hover:text-red-600 transition-colors duration-300"
+              className="px-6 py-2 border theme-border rounded-full text-lg uppercase tracking-normal font-sans font-light hover:bg-brand-white hover:text-brand-black transition-all duration-500"
             >
               {item}
             </a>
           ))}
-          <button
-            onClick={onBookingClick}
-            className="px-6 py-2 border theme-border rounded-full text-lg uppercase tracking-normal font-sans font-light hover:bg-brand-white hover:text-brand-black transition-all duration-500"
-          >
-            Let's Talk
-          </button>
         </div>
 
         <button className="md:hidden flex flex-col space-y-1.5" onClick={onBookingClick}>

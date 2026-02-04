@@ -10,10 +10,12 @@ import Services from './components/Services';
 import Footer from './components/Footer';
 import MotionPointer from './components/MotionPointer';
 import BookingForm from './components/BookingForm';
+import LegalModal from './components/LegalModal';
 
 function App() {
   const [theme, setTheme] = useState<'dark' | 'light'>('dark');
   const [isBookingOpen, setIsBookingOpen] = useState(false);
+  const [legalModal, setLegalModal] = useState<'privacy' | 'terms' | null>(null);
 
   useEffect(() => {
     document.documentElement.setAttribute('data-theme', theme);
@@ -53,15 +55,26 @@ function App() {
         <About />
         <Services />
       </main>
-      <Footer />
+      <Footer
+        onPrivacyClick={() => setLegalModal('privacy')}
+        onTermsClick={() => setLegalModal('terms')}
+      />
 
       {/* Booking Form Modal */}
       <BookingForm
         isOpen={isBookingOpen}
         onClose={() => setIsBookingOpen(false)}
       />
+
+      {/* Legal Modals */}
+      <LegalModal
+        isOpen={legalModal !== null}
+        onClose={() => setLegalModal(null)}
+        type={legalModal || 'privacy'}
+      />
     </div>
   );
 }
 
 export default App;
+
