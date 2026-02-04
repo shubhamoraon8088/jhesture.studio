@@ -1,20 +1,54 @@
 <div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
+<img width="1200" height="475" alt="Jhesture Studio Banner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
 </div>
 
-# Run and deploy your AI Studio app
+# Jhesture.studio - Creative Portfolio
 
-This contains everything you need to run your app locally.
+A premium, high-performance creative portfolio built with React, Vite, and Tailwind CSS. This site features immersive visual experiences, including dynamic video scaling for YouTube content, precise framing for podcast media, and professional motion design.
 
-View your app in AI Studio: https://ai.studio/apps/drive/1VA-0FyasylSEuNoCyPhV_7uP9hrgqilH
+## Features
 
-## Run Locally
+- **Immersive Video Integration**: Seamless support for local and YouTube videos (including Shorts).
+- **Dynamic Scaling**: Custom iframe scaling to ensure full-frame coverage (object-fit: cover) across all device types and aspect ratios.
+- **Cinematic Motion**: Smooth transitions and scrolling effects that highlight visual content.
+- **Responsive Design**: Optimized for everything from mobile screens to ultra-wide displays.
 
-**Prerequisites:**  Node.js
+## Getting Started
 
+### Prerequisites
 
-1. Install dependencies:
-   `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
-   `npm run dev`
+- **Node.js** (v18 or higher recommended)
+- **npm** or **yarn**
+
+### Installation
+
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/shubhamoraon8088/Jhesture.studio-PORTFOLIO.git
+   ```
+
+2. Install dependencies:
+   ```bash
+   npm install
+   ```
+
+3. Run the development server:
+   ```bash
+   npm run dev
+   ```
+
+4. Build for production:
+   ```bash
+   npm run build
+   ```
+
+## Key Technologies
+
+- **React / TypeScript**: Core application logic.
+- **Vite**: Ultra-fast development and build pipeline.
+- **Tailwind CSS**: Modern utility-first styling.
+- **GSAP / Framer Motion**: Advanced animation capabilities.
+
+---
+
+*Handcrafted by Jhesture.studio*
