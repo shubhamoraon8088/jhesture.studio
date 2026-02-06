@@ -70,7 +70,7 @@ const StudioSection: React.FC = () => {
         <div
           className="absolute inset-0 bg-cover bg-center bg-no-repeat grayscale-[0.2] brightness-90 hover:grayscale-0 transition-all duration-700"
           style={{
-            backgroundImage: `url('/studio-setup.jpg')`,
+            backgroundImage: `url('./studio-setup.jpg')`,
           }}
         />
 

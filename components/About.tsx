@@ -58,7 +58,7 @@ const About: React.FC = () => {
       <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-24 items-center">
         <div className="relative aspect-[3/4] overflow-hidden rounded-sm order-2 lg:order-1 bg-brand-gray shadow-xl">
           <img
-            src="/about-portrait.png"
+            src="./about-portrait.png"
             alt="Portrait"
             className="w-full h-full object-cover grayscale brightness-90 hover:grayscale-0 transition-all duration-700"
           />
