@@ -1,7 +1,3 @@
-<div align="center">
-<img width="1200" height="475" alt="Jhesture Studio Banner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
-</div>
-
 # Jhesture.studio - Creative Portfolio
 
 A premium, high-performance creative portfolio built with React, Vite, and Tailwind CSS. This site features immersive visual experiences, including dynamic video scaling for YouTube content, precise framing for podcast media, and professional motion design.
