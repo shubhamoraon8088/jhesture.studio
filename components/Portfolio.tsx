@@ -123,19 +123,19 @@ const Portfolio: React.FC = () => {
   };
 
   return (
-    <section id="works" className="py-32 px-6 md:px-12 bg-brand-black">
+    <section id="works" className="py-24 md:py-32 px-4 md:px-12 bg-brand-black">
       <div className="max-w-7xl mx-auto">
-        <div className="flex flex-col md:flex-row justify-between items-end mb-24 gap-8 border-b theme-border pb-12">
+        <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-16 md:mb-24 gap-8 border-b theme-border pb-12">
           <div>
-            <h2 className="text-4xl md:text-6xl uppercase tracking-[0.4em] text-brand-muted mb-4 font-sans font-bold">Showcase</h2>
+            <h2 className="text-3xl md:text-6xl uppercase tracking-[0.4em] text-brand-muted mb-4 font-sans font-bold">Showcase</h2>
             <h3 className="text-4xl md:text-7xl font-serif leading-none">The <span className="italic">Portfolio.</span></h3>
           </div>
-          <p className="max-w-xs text-xs uppercase tracking-widest leading-relaxed text-brand-muted md:text-right font-sans">
+          <p className="max-w-xs text-[10px] md:text-xs uppercase tracking-widest leading-relaxed text-brand-muted md:text-right font-sans">
             Crafting immersive visual experiences for global brands through motion and sound.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-16 md:gap-x-12 md:gap-y-32">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-20 md:gap-x-12 md:gap-y-32">
           {PORTFOLIO_ITEMS.map((item, index) => {
             const isLandscape = index >= 4;
             const aspectClass = isLandscape ? 'aspect-video' : 'aspect-[4/5]';
@@ -175,7 +175,7 @@ const Portfolio: React.FC = () => {
                 )}
 
                 {/* Vertical Sliding Image/Video Window */}
-                <div className={`group relative ${aspectClass} overflow-hidden bg-brand-gray mb-8 rounded-sm shadow-sm transition-colors duration-500`}>
+                <div className={`group relative ${aspectClass} overflow-hidden bg-brand-gray mb-6 md:mb-8 rounded-sm shadow-sm transition-colors duration-500`}>
 
                   {item.video ? (
                     item.hoverVideo ? (
@@ -334,10 +334,10 @@ const Portfolio: React.FC = () => {
                 {/* Static Text Info */}
                 <div className="flex justify-between items-start z-20 relative pointer-events-none">
                   <div>
-                    <h3 className="text-2xl font-serif mb-2 transition-colors group-hover:italic">{item.title}</h3>
-                    <p className="text-[9px] uppercase tracking-[0.3em] text-brand-muted font-sans font-bold">Role: Lead Editor</p>
+                    <h3 className="text-xl md:text-2xl font-serif mb-2 transition-colors group-hover:italic">{item.title}</h3>
+                    <p className="text-[8px] md:text-[9px] uppercase tracking-[0.3em] text-brand-muted font-sans font-bold">Role: Lead Editor</p>
                   </div>
-                  <p className="font-serif italic text-brand-muted transition-colors">{item.year}</p>
+                  <p className="font-serif italic text-brand-muted transition-colors text-sm md:text-base">{item.year}</p>
                 </div>
               </div>
             );

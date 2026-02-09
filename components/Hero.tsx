@@ -43,6 +43,7 @@ const Hero: React.FC = () => {
   const [fillLevel, setFillLevel] = useState(200); // Start at bottom of viewBox
   const [scrollOffset, setScrollOffset] = useState(0);
   const [theme, setTheme] = useState<'dark' | 'light'>('dark');
+  const [showPrompter, setShowPrompter] = useState(true);
   const containerRef = useRef<HTMLDivElement>(null);
 
   // Detect theme changes
@@ -104,9 +105,16 @@ const Hero: React.FC = () => {
 
     window.addEventListener('scroll', handleScroll);
 
+    // Hide prompter on any click/touch
+    const handleFirstInteraction = () => setShowPrompter(false);
+    window.addEventListener('mousedown', handleFirstInteraction);
+    window.addEventListener('touchstart', handleFirstInteraction);
+
     return () => {
       window.removeEventListener('mousemove', handleMouseMove);
       window.removeEventListener('scroll', handleScroll);
+      window.removeEventListener('mousedown', handleFirstInteraction);
+      window.removeEventListener('touchstart', handleFirstInteraction);
       clearInterval(timer);
       clearTimeout(fillTimer);
     };
@@ -120,6 +128,18 @@ const Hero: React.FC = () => {
     <section
       ref={containerRef}
       className="relative h-screen w-full bg-brand-black overflow-hidden flex items-center justify-center select-none"
+      onClick={(e) => {
+        // Revealed gallery on tap for mobile
+        setMousePos({ x: e.clientX, y: e.clientY });
+      }}
+      onTouchStart={(e) => {
+        const touch = e.touches[0];
+        setMousePos({ x: touch.clientX, y: touch.clientY });
+      }}
+      onTouchMove={(e) => {
+        const touch = e.touches[0];
+        setMousePos({ x: touch.clientX, y: touch.clientY });
+      }}
     >
       {/* Interactive Gallery Background */}
       <div className="absolute inset-0 z-10 pointer-events-none">
@@ -230,6 +250,15 @@ const Hero: React.FC = () => {
           <p className="text-4xl md:text-5xl font-serif italic text-brand-white/90 transition-colors lowercase">shubham toppo</p>
         </div>
         <div className="flex flex-col items-center md:items-end gap-2">
+          {/* Mobile Prompter */}
+          {showPrompter && (
+            <div className="absolute top-[-40px] left-1/2 -translate-x-1/2 md:hidden animate-bounce pointer-events-none">
+              <p className="text-[10px] uppercase tracking-[0.3em] text-brand-white/60 font-sans font-bold whitespace-nowrap">
+                Tap anywhere to reveal
+              </p>
+            </div>
+          )}
+
           <p className="text-xl md:text-2xl uppercase tracking-[0.4em] text-brand-muted font-sans font-medium transition-all duration-500 ease-in-out min-w-[120px]">
             {GREETINGS[greetingIndex]}
           </p>
