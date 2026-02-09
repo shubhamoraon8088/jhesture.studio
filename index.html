@@ -100,13 +100,19 @@
     .marquee-item {
       display: inline-block;
       font-family: Inter, sans-serif;
-      font-size: 1.25rem;
+      font-size: 0.875rem;
       font-weight: 300;
       text-transform: uppercase;
       letter-spacing: 0;
       color: var(--text-muted);
-      margin-right: 8rem;
+      margin-right: 4rem;
       opacity: 0.5;
+    }
+
+    @media (min-width: 768px) {
+      .marquee-item {
+        margin-right: 8rem;
+      }
     }
   </style>
   <script type="importmap">

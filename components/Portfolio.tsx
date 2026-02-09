@@ -127,7 +127,7 @@ const Portfolio: React.FC = () => {
       <div className="max-w-7xl mx-auto">
         <div className="flex flex-col md:flex-row justify-between items-end mb-24 gap-8 border-b theme-border pb-12">
           <div>
-            <h2 className="text-6xl uppercase tracking-[0.4em] text-brand-muted mb-4 font-sans font-bold">Showcase</h2>
+            <h2 className="text-4xl md:text-6xl uppercase tracking-[0.4em] text-brand-muted mb-4 font-sans font-bold">Showcase</h2>
             <h3 className="text-4xl md:text-7xl font-serif leading-none">The <span className="italic">Portfolio.</span></h3>
           </div>
           <p className="max-w-xs text-xs uppercase tracking-widest leading-relaxed text-brand-muted md:text-right font-sans">

@@ -159,7 +159,7 @@ const Hero: React.FC = () => {
         <div className="relative">
           <svg
             viewBox="0 0 1000 200"
-            className="w-[90vw] md:w-[70vw] h-auto max-w-[1200px]"
+            className="w-[95vw] md:w-[70vw] h-auto max-w-[1200px]"
             preserveAspectRatio="xMidYMid meet"
           >
             <defs>
@@ -188,7 +188,7 @@ const Hero: React.FC = () => {
               dominantBaseline="middle"
               className="font-sans font-black lowercase tracking-[-0.07em]"
               style={{
-                fontSize: '140px',
+                fontSize: 'clamp(80px, 14vw, 140px)',
                 fill: 'none',
                 stroke: strokeColor,
                 strokeWidth: fillLevel > 5 ? '2px' : '0px',
@@ -206,7 +206,7 @@ const Hero: React.FC = () => {
               dominantBaseline="middle"
               className="font-sans font-black lowercase tracking-[-0.07em]"
               style={{
-                fontSize: '140px',
+                fontSize: 'clamp(80px, 14vw, 140px)',
                 fill: fillColor,
               }}
               clipPath="url(#liquidClip)"
@@ -217,23 +217,23 @@ const Hero: React.FC = () => {
         </div>
 
         <div className="mt-12">
-          <p className="text-xl uppercase tracking-[0.6em] text-brand-muted font-sans font-medium transition-colors">
+          <p className="text-sm uppercase tracking-[0.6em] text-brand-muted font-sans font-medium transition-colors">
             EXPLORE THE ART OF CREATIVITY
           </p>
         </div>
       </div>
 
       {/* Bottom Text */}
-      <div className="absolute bottom-16 w-full px-12 z-30 flex justify-between items-end border-t theme-border pt-12">
+      <div className="absolute bottom-10 md:bottom-16 w-full px-6 md:px-12 z-30 flex flex-col md:flex-row justify-between items-center md:items-end gap-8 text-center md:text-left">
         <div className="space-y-1">
-          <p className="text-4xl uppercase tracking-widest text-brand-muted font-sans font-bold transition-colors">the man. the mind. the vision</p>
-          <p className="text-6xl md:text-7xl font-serif italic text-brand-white/90 transition-colors lowercase">shubham toppo</p>
+          <p className="text-xs md:text-xl uppercase tracking-widest text-brand-muted font-sans font-bold transition-colors">the man. the mind. the vision</p>
+          <p className="text-4xl md:text-5xl font-serif italic text-brand-white/90 transition-colors lowercase">shubham toppo</p>
         </div>
-        <div className="flex flex-col items-end gap-2">
-          <p className="text-5xl uppercase tracking-[0.4em] text-brand-muted font-sans font-medium transition-all duration-500 ease-in-out min-w-[120px] text-right">
+        <div className="flex flex-col items-center md:items-end gap-2">
+          <p className="text-xl md:text-2xl uppercase tracking-[0.4em] text-brand-muted font-sans font-medium transition-all duration-500 ease-in-out min-w-[120px]">
             {GREETINGS[greetingIndex]}
           </p>
-          <div className="w-12 h-px bg-brand-white/20 animate-pulse transition-colors"></div>
+          <div className="w-12 h-px bg-brand-white/20 animate-pulse transition-colors md:block hidden"></div>
         </div>
       </div>
     </section>
